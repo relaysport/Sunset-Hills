@@ -38,7 +38,7 @@ function sunsetHills() {
     }
 
     if (sunlitBuildings.length > 1) {
-        document.getElementById("results").innerHTML = (sunlitBuildings.length) + " buildings have light shining on them. These buildings have the heights of " + sunlitBuildings.join(", ") + "."
+        document.getElementById("results").innerHTML = (sunlitBuildings.length) + " buildings have light shining on them. These buildings have heights of " + sunlitBuildings.join(", ") + "."
 
     }
 
