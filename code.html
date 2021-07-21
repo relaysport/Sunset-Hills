@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en" class="h-100">
+
+<head>
+    <title>FizzBuzz | My Code</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="/css/prism.css">
+    <link rel="stylesheet" href="/css/site.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--- This is the CSS for basic and branded Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body class="d-flex flex-column h-100">
+
+    <nav id="custombackgroundcolor" class="navbar navbar-expand-md navbar-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/code.html"><img src="img/favicon.ico" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/app.html">My Program</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/code.html">My Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">About Me</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-shrink-0">
+        <div class="container col-xxl-8 px-4 py-5 mt-5">
+            <h1 id="customtextcolor">The Code</h1>
+            <hr style="margin-top: 0;height:2px;border-width:0;color:gray;background-color:gray">
+            <div class="row">
+                <div class="col-8" id="codeCol">
+                    <pre><code class="language-javascript line-numbers">    
+function sunsetHills() {
+
+    let value1 = document.getElementById("value1").value;
+    let value2 = document.getElementById("value2").value;
+    let value3 = document.getElementById("value3").value;
+    let value4 = document.getElementById("value4").value;
+    let value5 = document.getElementById("value5").value;
+    let value6 = document.getElementById("value6").value;
+
+    let sunlitBuildings = [];
+
+    if (value1 > 0) {
+        sunlitBuildings.push(value1);
+    }
+
+    if (value2 > value1) {
+        sunlitBuildings.push(value2);
+    }
+
+    if (value3 > value2 & value3 > value1) {
+        sunlitBuildings.push(value3);
+    }
+
+    if (value4 > value3 & value4 > value2 & value4 > value1) {
+        sunlitBuildings.push(value4);
+    }
+
+    if (value5 > value4 & value5 > value4 & value5 > value3 & value5 > value2 & value5 > value1) {
+        sunlitBuildings.push(value5);
+    }
+
+    if (value6 > value4 & value6 > value5 & value6 > value4 & value6 > value3 & value6 > value2 & value6 > value1) {
+        sunlitBuildings.push(value6);
+    }
+
+    if (sunlitBuildings.length < 2 & sunlitBuildings > 0) {
+        document.getElementById("results").innerHTML = "1 building has light shining on it. This building has a height of " + sunlitBuildings + "."
+    }
+
+    if (sunlitBuildings.length > 1) {
+        document.getElementById("results").innerHTML = (sunlitBuildings.length) + " buildings have light shining on them. These buildings have the heights of " + sunlitBuildings.join(", ") + "."
+
+    }
+
+}
+                </code>
+            </pre>
+                </div>
+                <div class="col" id="explainCol">
+                    <h1 id="customtextcolor">sunsetHills</h1>
+                    <p>sunsetHills is the only function used to complete the challenge. Visitor inputs are gathered
+                        through the several value declarations. The blank array, sunlitBuildings, is created, which will
+                        later be used to display the output. My code uses an if statement for each value to determine if
+                        it should be pushed into the array or not. If a given value input is greater than the values
+                        before it, then it is pushed into the array. The final two if statements are used to account for
+                        grammar, as the number of sunlit buildings can be singular or plural. As you're looking back
+                        over my code, the first if function might seem unnecessary. However, if the user inputs a height
+                        of 0 for the first building, it will show up in the sunlit buildings list output without this if
+                        statement.
+                        A building with no height does not exist and, as a result, can not have sun shining on it,
+                        which is why I have this first if statement.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+        integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
+    </script>
+    <script src="/js/prism.js"></script>
+    <script src="/js/site.js"></script>
+    <script src="/js/all.min.js"></script>
+
+    <!-- FontAwesome JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
+        integrity="sha512-RXf+QSDCUQs5uwRKaDoXt55jygZZm2V++WUZduaU/Ui/9EGp3f/2KZVahFZBKGH0s774sd3HmrhUy+SgOFQLVQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+</html>
